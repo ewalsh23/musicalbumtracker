@@ -31,3 +31,9 @@ CREATE TABLE UserRatings (
     UNIQUE (user_id, album_id),
     FOREIGN KEY (album_id) REFERENCES Albums(id)
 );
+
+
+SELECT * FROM Artists;
+SELECT * FROM Albums;
+SELECT * FROM Tracks;
+SELECT * FROM UserRatings;
