@@ -37,3 +37,40 @@ SELECT * FROM Artists;
 SELECT * FROM Albums;
 SELECT * FROM Tracks;
 SELECT * FROM UserRatings;
+
+SELECT album_name, release_date FROM Albums;
+SELECT track_name, duration FROM Tracks;
+SELECT user_id, album_id, rating, review FROM UserRatings;
+
+SELECT a.album_name, ar.name AS artist_name
+FROM Albums a
+JOIN Artists ar ON a.artist_id = ar.id;
+
+SELECT t.track_name, al.album_name, ar.name AS artist_name
+FROM Tracks t
+JOIN Albums al ON t.album_id = al.id
+JOIN Artists ar ON al.artist_id = ar.id;
+
+SELECT album_id, AVG(rating) AS average_rating
+FROM UserRatings
+GROUP BY album_id;
+
+UPDATE UserRatings
+SET review = 'Still one of my favorites!'
+WHERE id = 1;
+
+INSERT INTO UserRatings (id, user_id, album_id, rating, review)
+VALUES (10, 210, 3, 5, 'Fantastic album!');
+
+DELETE FROM UserRatings
+WHERE id = 10;
+
+SELECT * FROM Albums
+WHERE release_date > TO_DATE('2000-01-01', 'YYYY-MM-DD');
+
+SELECT * FROM Tracks
+WHERE duration > INTERVAL '4' MINUTE;
+
+SELECT * FROM UserRatings
+WHERE rating = 5
+ORDER BY id;
