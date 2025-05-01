@@ -5,8 +5,8 @@ This is a SQL-based music database system that manages information about artists
  Project Contents
 
 SQL Tables: Definitions for `Artists`, `Albums`, `Tracks`, and `UserRatings`.
-Data Inserts: Sample records for all tables to simulate a real-world music database.
-Sample Queries: A variety of `SELECT`, `JOIN`, `AGGREGATE`, and `UPDATE` statements to demonstrate data manipulation and retrieval.
+Data Inserts: Sample records.
+Sample Queries:`SELECT`statements to demonstrate data retrieval.
 
 How to Execute 
 1. Setup
